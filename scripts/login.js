@@ -9,7 +9,7 @@ formL.addEventListener('submit', evento => {
 
     console.log(data)
 
-    const URL = "http://localhost:8080/login";
+    const URL = "https://meteora-api-theta.vercel.app/login";
 
     fetch(URL, {
         method: 'POST',
