@@ -7,9 +7,9 @@ formL.addEventListener('submit', evento => {
     const formData = new FormData(formL)
     const data = Object.fromEntries(formData)
 
-    console.log(data)
+    console.log('Enviado')
 
-    const URL = "https://meteora-api-theta.vercel.app/login";
+    const URL = "http://localhost:8080/login";
 
     fetch(URL, {
         method: 'POST',
@@ -20,13 +20,17 @@ formL.addEventListener('submit', evento => {
     })
         .then((res) => {
             if (!res.ok) {
-                console.log(`Erro de requisição`)
+                return res.json().then(errorData => {
+                    const errorMessage = errorData.message || "Erro desconhecido";
+                    alert(errorMessage);
+                    throw new Error(errorMessage);
+                })
             }
             return res.json()
         })
         .then((data) => {
             console.log(data)
-            if (data.message =="Login realizado com sucesso") {
+            if (data.message == "Login realizado com sucesso") {
                 window.location.href = "../pages/home.html"
             } else {
                 alert(data.message)
