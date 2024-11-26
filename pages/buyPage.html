@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/loja.css">
+    <title>Loja</title>
+</head>
+
+<body>
+    <header>
+        <div class="txtHeader">
+            <img src="../images/icons/verify.svg" alt="verify">
+            <h1>Confira detalhes sobre o produto</h1>
+        </div>
+        <a href="./home.html" class="imgHeader">
+            <img src="../images/icons/x.svg" alt="x">
+        </a>
+    </header>
+    <main>
+        <div class="boxImage">
+            <img src="#" alt="Imagem">
+        </div>
+        <div class="boxBuy">
+            <div class="titleBuy">
+                <h2>Title</h2>
+                <p>Desc...</p>
+            </div>
+            <div class="priceBuy">
+                <h4>R$ <span class="price">00</span></h4>
+                <span>Estoque: <span class="qtd">0</span></span>
+            </div>
+            <div class="colorsBuy">
+                <h3>Cores:</h3>
+                <div class="boxCheck">
+                    <div class="checkColorBox">
+                        <input type="radio" name="color" id="checkColor1" class="checkColor" value="lightBlue">
+                        <label for="checkColor1">Azul claro</label>
+                    </div>
+                    <div class="checkColorBox">
+                        <input type="radio" name="color" id="checkColor2" class="checkColor" value="Offwhite">
+                        <label for="checkColor2">Offwhite</label>
+                    </div>
+                    <div class="checkColorBox">
+                        <input type="radio" name="color" id="checkColor3" class="checkColor" value="black">
+                        <label for="checkColor3">Preto</label>
+                    </div>
+                </div>
+            </div>
+            <div class="sizeBuy">
+                <h3>Tamanho:</h3>
+                <div class="boxCheck">
+                    <div class="checkBox">
+                        <input type="radio" name="checkSize" id="checkSize1" value="PP">
+                        <label for="checkSize1">PP</label>
+                    </div>
+                    <div class="checkBox">
+                        <input type="radio" name="checkSize" id="checkSize2" value="P">
+                        <label for="checkSize2">P</label>
+                    </div>
+                    <div class="checkBox">
+                        <input type="radio" name="checkSize" id="checkSize3" value="M">
+                        <label for="checkSize3">M</label>
+                    </div>
+                    <div class="checkBox">
+                        <input type="radio" name="checkSize" id="checkSize4" value="G">
+                        <label for="checkSize4">G</label>
+                    </div>
+                    <div class="checkBox">
+                        <input type="radio" name="checkSize" id="checkSize5" value="GG">
+                        <label for="checkSize5">GG</label>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonBuyBox">
+                <button id="buttonBuy">Adicionar à sacola</button>
+            </div>
+        </div>
+    </main>
+    <script src="../scripts/buyPage.js"></script>
+</body>
+
+</html>
