@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const URL = 'http://localhost:4002/manager/loadInfos';
+    const URL = 'https://meteoraapi.onrender.com/manager/loadInfos';
     const container = document.querySelectorAll('.itemComprar');
 
     fetch(URL, {

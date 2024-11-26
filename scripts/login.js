@@ -7,7 +7,7 @@ formL.addEventListener('submit', evento => {
     const formData = new FormData(formL);
     const data = Object.fromEntries(formData);
 
-    const URL = "http://localhost:4002/api/login";
+    const URL = "https://meteoraapi.onrender.com/api/login";
 
     fetch(URL, {
         method: 'POST',

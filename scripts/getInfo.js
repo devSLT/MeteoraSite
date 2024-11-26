@@ -14,7 +14,7 @@ item.forEach((element) => {
             idImage
         }
 
-        const URL = 'http://localhost:4002/manager/getInfos';
+        const URL = 'https://meteoraapi.onrender.com/manager/getInfos';
 
         fetch(URL, {
             method: 'POST',

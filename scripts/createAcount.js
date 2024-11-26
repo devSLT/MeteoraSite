@@ -9,7 +9,7 @@ formL.addEventListener('submit', evento => {
 
     // console.log(data)
 
-    const URL = "http://localhost:4002/api/newUser";
+    const URL = "https://meteoraapi.onrender.com/api/newUser";
 
     fetch(URL, {
         method: 'POST',

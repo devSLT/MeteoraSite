@@ -1,7 +1,8 @@
 // Carregando Imagens e dados ao carregar a pagina
 document.addEventListener("DOMContentLoaded", () => {
 
-    const URL = 'http://localhost:4002/manager/getInfos';
+    const URL = 'https://meteoraapi.onrender.com/manager/getInfos';
+    // const URL = 'http://localhost:4002/manager/getInfos';
 
     const idImage = localStorage.getItem('imageId')
 
@@ -76,7 +77,7 @@ document.getElementById('buttonBuy').addEventListener('click', () => {
         return alert('Faça Login novamente para prosseguir.')
     }
 
-    const URL = 'http://localhost:4002/manager/buyItem';
+    const URL = 'https://meteoraapi.onrender.com/manager/buyItem';
 
     const data = {
         idImage,
