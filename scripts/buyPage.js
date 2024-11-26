@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then((data) => {
 
-            console.log(data)
+            // console.log(data)
             const dados = data.dados;
 
             //Acessar a boxImage e alterar a src da imagem
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             //Acessando boxBuy
-            console.log(boxBuy)
+            // console.log(boxBuy)
 
             const titleBuy = boxBuy.querySelector('.titleBuy');
             const title = titleBuy.querySelector('h2');

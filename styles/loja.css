@@ -55,7 +55,7 @@ header .txtHeader h1 {
     color: white;
 }
 
-header .imgHeader  {
+header .imgHeader {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -75,12 +75,14 @@ main {
     width: 100%;
     display: flex;
     padding: 3vh;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Configuracao Box Image (lado esquerdo) */
 .boxImage {
     width: 30%;
-    height: 70vh;
+    height: 75vh;
 }
 
 .boxImage img {
@@ -101,7 +103,7 @@ main {
 }
 
 .titleBuy {
-    width: 30%;
+    width: 50%;
     height: 25%;
     overflow: hidden;
     display: flex;
@@ -123,7 +125,7 @@ main {
 }
 
 .priceBuy {
-    width: 30%;
+    width: 50%;
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -137,7 +139,7 @@ main {
     font-weight: 500;
 }
 
-.priceBuy h4 span{
+.priceBuy h4 span {
     font-size: calc(0.7rem + 0.7vw);
     font-weight: 500;
     color: black;
@@ -150,7 +152,7 @@ main {
 }
 
 .colorsBuy {
-    width: 30%;
+    width: 50%;
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -178,12 +180,18 @@ main {
     align-items: center;
 }
 
-.colorsBuy .checkColorBox label {
+.colorsBuy label {
     margin-top: 5px;
+    font-size: calc(0.4rem + 0.4vw);
+}
+
+.sizeBuy label {
+    margin-top: 5px;
+    font-size: calc(0.4rem + 0.4vw);
 }
 
 .sizeBuy {
-    width: 30%;
+    width: 50%;
     height: 20%;
     display: flex;
     flex-direction: column;
@@ -208,7 +216,7 @@ main {
     margin-top: 5px;
 }
 
-.buttonBuyBox{
+.buttonBuyBox {
     width: 30%;
     height: 10%;
     display: flex;
@@ -217,73 +225,127 @@ main {
     align-items: center;
 }
 
-.buttonBuyBox button{
-    width: 50%;
+.buttonBuyBox button {
+    width: 70%;
     height: 80%;
     background-color: #9353FF;
     color: white;
     font-size: calc(0.5rem + 0.5vw);
     cursor: pointer;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
-@media screen and (max-width:930px){
-    main{
+.buttonBuyBox button:hover {
+    scale: 1.05;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media screen and (max-width:930px) {
+    main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .boxImage{
+    .boxImage {
         width: 60%;
         padding: 0;
+    }
+
+    .boxBuy{
+        height: 90vh;
     }
 
     .titleBuy {
         width: 80%;
     }
 
-    .priceBuy{
+    .titleBuy h2 {
+        font-size: calc(1rem + 1vw);
+    }
+
+    .titleBuy p {
+        font-size: calc(0.6rem + 0.6vw);
+    }
+
+
+    .priceBuy {
         width: 80%;
     }
 
-    .colorsBuy{
+    .priceBuy h4{
+        font-size: calc(0.9rem + 0.9vw);
+    }
+
+    .priceBuy h4 span{
+        font-size: calc(0.9rem + 0.9vw);
+    }
+
+    .priceBuy span{
+        font-size: calc(0.7rem + 0.7vw);
+    }
+
+    .colorsBuy {
         width: 80%;
     }
 
-    .sizeBuy{
+    .colorsBuy h3 {
+        font-size: calc(0.7rem + 0.8vw);
+    }
+    
+    .colorsBuy label {
+        font-size: calc(0.6rem + 0.6vw);
+    }
+
+    .sizeBuy {
         width: 80%;
     }
 
-    .buttonBuyBox{
+    .sizeBuy h3 {
+        font-size: calc(0.7rem + 0.8vw);
+    }
+    
+    .sizeBuy label {
+        font-size: calc(0.6rem + 0.6vw);
+    }
+
+    .buttonBuyBox {
         width: 80%;
     }
 
-    header .txtHeader img{
+    .buttonBuyBox button{
+        font-size: calc(0.7rem + 0.8vw);
+    }
+
+    header .txtHeader img {
         width: 8%;
     }
 
-    header .imgHeader  {
+    header .imgHeader {
         display: flex;
         justify-content: end;
         align-items: center;
         width: 30%;
         height: 100%;
     }
-    
+
     header .imgHeader img {
         width: 25%;
         margin-right: 2%;
     }
 }
 
-@media screen and (max-width:720px){
-    main{
+@media screen and (max-width:720px) {
+    main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .boxImage{
+    .boxImage {
         width: 90%;
         padding: 0;
     }
@@ -293,32 +355,32 @@ main {
         height: 80vh;
         padding-left: 0
     }
-    
+
 
     .titleBuy {
         width: 100%;
     }
 
-    .priceBuy{
+    .priceBuy {
         width: 100%;
     }
 
-    .colorsBuy{
+    .colorsBuy {
         width: 100%;
     }
 
-    .sizeBuy{
+    .sizeBuy {
         width: 100%;
     }
 
-    .buttonBuyBox{
+    .buttonBuyBox {
         width: 100%;
     }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:500px) {
 
-    .boxImage{
+    .boxImage {
         width: 100%;
         height: 50vh;
         padding: 0;
@@ -330,19 +392,19 @@ main {
         padding-left: 0
     }
 
-    header .txtHeader img{
+    header .txtHeader img {
         width: 10%;
         margin-right: 20px;
     }
 
-    header .imgHeader  {
+    header .imgHeader {
         display: flex;
         justify-content: end;
         align-items: center;
         width: 30%;
         height: 100%;
     }
-    
+
     header .imgHeader img {
         width: 50%;
         margin-right: 2%;

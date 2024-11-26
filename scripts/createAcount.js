@@ -7,7 +7,7 @@ formL.addEventListener('submit', evento => {
     const formData = new FormData(formL)
     const data = Object.fromEntries(formData)
 
-    console.log(data)
+    // console.log(data)
 
     const URL = "http://localhost:4002/api/newUser";
 

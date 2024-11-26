@@ -29,7 +29,7 @@ formL.addEventListener('submit', evento => {
         .then((data) => {
 
             if (!data.sucess) {
-                console.log(data.message)
+                // console.log(data.message)
                 return alert(data.message);
             }
 
