@@ -151,6 +151,11 @@ main {
     color: #ADB5BD;
 }
 
+.pedidos{
+    width: 25%;
+    text-align: center;
+}
+
 .colorsBuy {
     width: 50%;
     height: 20%;

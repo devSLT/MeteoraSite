@@ -64,10 +64,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+const inputAmount = document.getElementById('amount');
+
+inputAmount.addEventListener('input', (event) => {
+    const value = parseInt(event.target.value, 10); // Converte para número inteiro
+    if (value < 1 || isNaN(value)) {
+        event.target.value = 1; // Restaura o valor para o mínimo permitido
+    }
+});
+
 //Enviar ao backEnd infos
 document.getElementById('buttonBuy').addEventListener('click', () => {
     const idImage = localStorage.getItem('imageId');
     const userId = localStorage.getItem('userId');
+    const amount = inputAmount.value
 
     if (!idImage) {
         return alert('Tente retornar para a tela inicial e acessar novamente.');
@@ -77,11 +87,16 @@ document.getElementById('buttonBuy').addEventListener('click', () => {
         return alert('Faça Login novamente para prosseguir.')
     }
 
+    if(!amount){
+        return alert('Insira uma quantidade válida.')
+    }
+
     const URL = 'https://meteoraapi.onrender.com/manager/buyItem';
 
     const data = {
         idImage,
-        userId
+        userId,
+        amount
     }
 
     fetch(URL, {
@@ -93,9 +108,10 @@ document.getElementById('buttonBuy').addEventListener('click', () => {
     })
         .then((res) => {
 
-            if (!res.ok) {
-                throw new Error('Erro na resposta do servidor: ' + res.status);
-            }
+            // if (!res.ok) {
+            //     console.log(res)
+            //     throw new Error('Erro na resposta do servidor: ' + res.status);
+            // } Isso faz com que erros entre 400 e 500 parem aqui
             return res.json();
 
         })
@@ -106,7 +122,7 @@ document.getElementById('buttonBuy').addEventListener('click', () => {
                 return window.location.href = "../pages/buyPage.html"
             }
 
-            return window.location.href = "../pages/home.html"
+            return location.reload()
 
         })
 
